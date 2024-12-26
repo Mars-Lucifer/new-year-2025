@@ -1,0 +1,193 @@
+body, html {
+    width: 100%;
+}
+
+body {
+    background-color: var(--black);
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --black: #0F1114;
+    --black-gray: #222529;
+    --black-gray-p: #2E3238;
+    --text-gray: #747A8A;
+    --white: #F5F8FF;
+    --blue: #3168F5;
+    --red: #E31718;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Text */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+* {
+    font-family: "Manrope", serif;
+    color: var(--white);
+}
+
+p {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.gray {color: var(--text-gray);}
+
+.a {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 26px;
+    font-weight: 500;
+}
+
+/* Block */
+.screen {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.left-block {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 100px;
+}
+
+.right-block {
+    height: 100%;
+    aspect-ratio: 1;
+    display: grid;
+    gap: 1%;
+    padding: 20px;
+    grid-template-rows: repeat(4, 24%);
+    grid-template-columns: repeat(4, 24%);
+}
+
+.grid-el {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 32px;
+    background-color: var(--black-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+    overflow: hidden;
+    z-index: 3;
+    transition: scale 0.2s ease-out, border-radius 0.2s ease-out;
+}
+.grid-el::after {
+    content: "";
+    position: absolute;
+    transform: translate(50%, 50%);
+    height: 100%;
+    width: 100%;
+    border-radius: 32px;
+    background-color: inherit;
+    opacity: 0.4;
+    z-index: -1;
+    transition: 2s ease;
+}
+
+@keyframes uuu {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.grid-el:hover {
+    z-index: 2;
+    cursor: pointer;
+    overflow: visible;
+    animation: border 1s infinite ease;
+}
+
+.grid-el:hover::after {
+    animation: uuu 3s infinite ease;
+    scale: 1.15;
+}
+
+@keyframes border {
+    0% {
+        border-radius: 52px;
+    }
+    50% {
+        border-radius: 32px;
+    }
+    100% {
+        border-radius: 52px;
+    }
+}
+
+.grid-el img {
+    width: 65%;
+    aspect-ratio: 1;
+    border-radius: 100px;
+}
+
+.flich {
+    background-color: #B16858;
+}
+
+.zaks {
+    background-color: #4D5A67;
+}
+
+.yui {
+    background-color: #482523;
+}
+
+.tema {
+    background-color: #57550C;
+}
+
+.den {
+    background-color: #7D6D5A;
+}
+
+.snasha {
+    background-color: #735748;
+}
+
+.belya {
+    background-color: #6D3B5C;
+}
+
+.vitalia {
+    background-color: #7A3641;
+}
+
+.grid-el-none:hover {
+    scale: 1;
+    cursor: default;
+    border-radius: 32px;
+    animation: none;
+}
