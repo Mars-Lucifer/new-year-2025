@@ -41,10 +41,14 @@ p {
 }
 
 .gray {color: var(--text-gray);}
+.red {
+    color: var(--red);
+}
 
-.a {
+.a, .btn, button {
     font-size: 18px;
     font-weight: 500;
+    text-decoration: none;
 }
 
 h1 {
@@ -55,6 +59,12 @@ h1 {
 h2 {
     font-size: 26px;
     font-weight: 500;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
 }
 
 /* Block */
@@ -72,16 +82,23 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start;
     padding: 100px;
 }
 
 .right-block {
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     aspect-ratio: 1;
+    padding: 20px;
+}
+
+.right-block_grid {
+    height: 100%;
+    width: 100%;
     display: grid;
     gap: 1%;
-    padding: 20px;
     grid-template-rows: repeat(4, 24%);
     grid-template-columns: repeat(4, 24%);
 }
@@ -98,8 +115,10 @@ h2 {
     flex-direction: column;
     gap: 12px;
     overflow: hidden;
+    color: var(--white);
     z-index: 3;
     transition: scale 0.2s ease-out, border-radius 0.2s ease-out;
+    padding: 0;
 }
 .grid-el::after {
     content: "";
@@ -190,4 +209,198 @@ h2 {
     cursor: default;
     border-radius: 32px;
     animation: none;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.w-360px {
+    width: 360px;
+}
+
+.btn, button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 26px;
+    border-radius: 16px;
+    background-color: var(--white);
+    color: var(--black);
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.block-24 {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+@keyframes dispawn {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-30px);
+        opacity: 0;
+    }
+}
+
+@keyframes spawn {
+    0% {
+        transform: translateX(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.big_dick {
+    width: 100%;
+    height: 100%;
+    border-radius: 46px;
+}
+
+.btn_gray {
+    background-color: var(--black-gray);
+    color: var(--white);
+}
+
+.btn_radio {
+    padding: 18px;
+    gap: 18px;
+    justify-content: flex-start;
+}
+
+.btn_radio div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--black-gray-p);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.btn_radio-active div {
+    background-color: var(--red);
+}
+
+.btn_radio div div {
+    height: 18px;
+    min-height: 18px;
+    aspect-ratio: 1;
+    padding: 0;
+}
+
+.btn_radio-active div img {
+    height: 18px;
+    aspect-ratio: 1;
+    animation: spawn_in 0.2s ease forwards;
+}
+
+@keyframes spawn_in {
+    0% {
+        scale: 0.8;
+        opacity: 0;
+    }
+    90% {
+        scale: 1.2;
+        opacity: 1;
+    }
+    100% {
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+.block-button {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn_radio .bac-white {
+    background-color: var(--white);
+}
+
+.btn-red {
+    background-color: var(--red);
+    color: var(--white);
+}
+
+.gift-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    background-color: var(--black-gray);
+    border-radius: 32px;
+    flex-direction: column;
+    padding: 100px;
+}
+
+.btn_gray_p {
+    background-color: var(--black-gray-p);
+    color: var(--white);
+}
+
+.face {
+    height: 100px;
+    aspect-ratio: 1;
+}
+
+.none {
+    display: none;
+}
+
+.w-400 {
+    width: 400px;
+}
+
+.text_center {
+    text-align: center;
+}
+
+
+
+@media (max-width: 1600px) {
+    p {
+        font-size: 16px;
+    }
+    
+    .a, .btn, button {
+        font-size: 16px;
+    }
+    
+    h1 {
+        font-size: 32px;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+    
+    .text {
+        gap: 14px;
+    }
+
+
+    .left-block {
+        padding: 60px 100px;
+    }
+    .gift-box {
+        padding: 60px;
+    }
+
+    .face {
+        height: 80px;
+    }
 }

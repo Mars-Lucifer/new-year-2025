@@ -6,62 +6,65 @@
     <title>🎄 New Year 2025</title>
     <link rel="stylesheet" href="/style/main.css">
     <script src="script.js"></script>
+    <link rel="shortcut icon" href="/files/svg/sosateo.svg" type="image/x-icon">
 </head>
 <body>
     <div class="screen">
         <div class="left-block">
             <div class="block-24">
                 <h1>Для получения подарка выбери себя</h1>
-                <p class="gray">Ты должен быть честен! Не смотри чужие подарки, иначе будешь плохим человеком</p>
+                <p class="gray w-360px">Ты должен быть честен! Не смотри чужие подарки, иначе будешь плохим человеком</p>
             </div>
             <div class="block-button">
-                <button class="btn-white">
+                <button onclick="alert('Выбери себя справа. Дурашка')" class="btn-white w-100">
                     Выбери себя
                     <img src="/files/svg/arrow.svg" alt="arrow">
                 </button>
             </div>
         </div>
         <div class="right-block">
-            <a class="grid-el flich">
-                <img src="/files/img/flich.png" alt="flich">
-                Фличик
-            </a>
-            <div class="grid-el grid-el-none"></div>
-            <div class="grid-el grid-el-none"></div>
-            <a class="grid-el zaks">
-                <img src="/files/img/zaks.png" alt="zaks">
-                Заксик
-            </a>
-            <div class="grid-el grid-el-none"></div>
-            <a class="grid-el yui">
-                <img src="/files/img/yui.png" alt="yui">
-                Юичикист
-            </a>
-            <a class="grid-el tema">
-                <img src="/files/img/tema.png" alt="tema">
-                Артемка
-            </a>
-            <div class="grid-el grid-el-none"></div>
-            <div class="grid-el grid-el-none"></div>
-            <a class="grid-el den">
-                <img src="/files/img/den.png" alt="den">
-                Mr Денчик
-            </a>
-            <a class="grid-el snasha">
-                <img src="/files/img/snasha.png" alt="snasha">
-                Снежа
-            </a>
-            <div class="grid-el grid-el-none"></div>
-            <a class="grid-el belya">
-                <img src="/files/img/belya.png" alt="belya">
-                Беля
-            </a>
-            <div class="grid-el grid-el-none"></div>
-            <div class="grid-el grid-el-none"></div>
-            <a class="grid-el vitalia">
-                <img src="/files/img/viralia.png" alt="viralia">
-                Виталя
-            </a>
+            <div class="right-block_grid">
+                <button onclick="click_me('flich')" class="grid-el flich">
+                    <img src="/files/img/flich.png" alt="flich">
+                    Фличик
+                </button>
+                <div class="grid-el grid-el-none"></div>
+                <div class="grid-el grid-el-none"></div>
+                <button onclick="click_me('zaks')" class="grid-el zaks">
+                    <img src="/files/img/zaks.png" alt="zaks">
+                    Заксик
+                </button>
+                <div class="grid-el grid-el-none"></div>
+                <button onclick="click_me('yui')" class="grid-el yui">
+                    <img src="/files/img/yui.png" alt="yui">
+                    Юичикист
+                </button>
+                <button onclick="click_me('tema')" class="grid-el tema">
+                    <img src="/files/img/tema.png" alt="tema">
+                    Артемка
+                </button>
+                <div class="grid-el grid-el-none"></div>
+                <div class="grid-el grid-el-none"></div>
+                <button onclick="click_me('den')" class="grid-el den">
+                    <img src="/files/img/den.png" alt="den">
+                    Mr Денчик
+                </button>
+                <button onclick="click_me('snasha')" class="grid-el snasha">
+                    <img src="/files/img/snasha.png" alt="snasha">
+                    Снежа
+                </button>
+                <div class="grid-el grid-el-none"></div>
+                <button onclick="click_me('belya')" class="grid-el belya">
+                    <img src="/files/img/belya.png" alt="belya">
+                    Беля
+                </button>
+                <div class="grid-el grid-el-none"></div>
+                <div class="grid-el grid-el-none"></div>
+                <button onclick="click_me('vitalia')" class="grid-el vitalia">
+                    <img src="/files/img/viralia.png" alt="viralia">
+                    Виталя
+                </button>
+            </div>
         </div>
     </div>
 </body>
