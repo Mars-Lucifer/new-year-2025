@@ -25,7 +25,7 @@ let activeMember;
 function click_me(member) {
     let name, btnContent = 'pupa';
     const h1 = document.querySelector('h1');
-    const text = document.querySelector('p');
+    const text = document.querySelectorAll('p')[1];
     const rightBlock = document.querySelector('.right-block');
     const blockButton = document.querySelector('.block-button');
 
