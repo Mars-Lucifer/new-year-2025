@@ -39,28 +39,84 @@ function click_me(member) {
                     [0, "Мандарина"],
                     [0, "Генерации артов с дудками"]
                 ]
-            ]
+            ];
             break;
         case 'zaks':
             name = "Заксик";
+            btnContent = [
+                "Выберите верное утверждение",
+                [
+                    [1, "Заксик любит Shiroori"],
+                    [1, "Заксик извращенец"],
+                    [1, "Все любят Заксика"]
+                ]
+            ];
             break;
         case 'yui':
             name = "Юичикист";
+            btnContent = [
+                "На Юичикизме...",
+                [
+                    [1, "Е*бут людей"],
+                    [0, "Репетируют в репетиционной"],
+                    [0, "Любят модератора Дениса"]
+                ]
+            ];
             break;
         case 'tema':
             name = "Артемка";
+            btnContent = [
+                "Когда на сайте появляется pop-up он говорит...",
+                [
+                    [0, "Какую-то нужную фразу в зависимости от контекста"],
+                    [0, "Он ничего не говорит и выдает ошибку в консоль"],
+                    [1, '“Здравствуйте”']
+                ]
+            ];
             break;
         case 'den':
             name = "Zhidkiy_Ganzalis";
+            btnContent = [
+                "Что делает Денчик в нашем выживании",
+                [
+                    [0, "Проходит майнкрафт и убивает дракона"],
+                    [1, "Строит секретную базу в секретной базе внутри секретной базы"],
+                    [0, 'Боится пещер']
+                ]
+            ];
             break;
         case 'snasha':
             name = "Снежа";
+            btnContent = [
+                "Твой любимый сок",
+                [
+                    [1, "Яблочный"],
+                    [0, "Виноградный"],
+                    [0, 'Томатный']
+                ]
+            ];
             break;
-        case 'belya':
-            name = "Беля";
+        case 'minoko':
+            name = "Миноко-стаффовец";
+            btnContent = [
+                "Стафф Миноко больше всего любит",
+                [
+                    [0, "Ярика старшего"],
+                    [0, "Пандочку"],
+                    [1, 'Суды']
+                ]
+            ];
             break;
         case 'vitalia':
             name = "Виталя";
+            btnContent = [
+                "Что делает Виталя когда блокируют ютуб в стране",
+                [
+                    [0, "Скачивает VPN"],
+                    [0, "Использует ZapretDPI"],
+                    [1, 'Переезжает в другую страну']
+                ]
+            ];
             break;
     }
 
@@ -152,7 +208,9 @@ function answer_send() {
 
 let lompensiState = false;
 function spawn_lompensi(block) {
-    let btn = block.parentElement.querySelectorAll('a');
+    let btnNode = block.parentElement.querySelectorAll('a, button');
+    let btn = Array.from(btnNode);
+    btn.shift();
 
     if (!lompensiState) {
         for (let i = 0; i < btn.length; i++) {
@@ -173,4 +231,37 @@ function spawn_lompensi(block) {
         }
         lompensiState = false;
     }
+}
+
+let pat = 0;
+function patPat() {
+    let text;
+    switch (pat) {
+        case 0:
+            text = "*pat-pat*";
+            break;
+        case 1:
+            text = "*pat-pat-pat*";
+            break;
+        case 2:
+            text = "*hug*";
+            break;
+        case 3:
+            text = "*hug-hug*";
+            break;
+        case 4:
+            text = "Ты хочешь ещё?";
+            break;
+        case 5:
+            text = "Ну хорошо. Ты готов?";
+            break;
+        case 6:
+            text = "*pat-pat-pat-pat-pat-pat-pat-pat-pat-pat-pat-pat-pat*"
+            break;
+        default:
+            text = "Если хочешь еще, напиши мне :3";
+            break;
+    }
+    alert(text);
+    pat = pat + 1;
 }
