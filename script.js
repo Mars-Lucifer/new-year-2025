@@ -265,3 +265,8 @@ function patPat() {
     alert(text);
     pat = pat + 1;
 }
+
+function spasibo() {
+    alert('Пожалуйста! Надеюсь тебе понравился подарок или его подобие');
+    window.location.href = `https://ny.mars-lucifer.ru`;
+}
